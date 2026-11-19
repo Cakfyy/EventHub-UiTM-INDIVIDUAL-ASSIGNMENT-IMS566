@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- PAGE: Login -->
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login | EventHub UiTM</title>
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script src="js/theme.js"></script>
+</head>
+<body>
+<div class="row g-0 min-vh-100">
+  <!-- Left panel (hidden on phone) -->
+  <div class="col-md-6 login-side d-none d-md-flex flex-column justify-content-between p-5">
+    <div class="d-flex align-items-center gap-2"><img src="assets/icons/favicon.svg" width="40" height="40" alt=""><span class="brand fs-4">EventHub UiTM</span></div>
+    <div>
+      <div class="demo-wallet mb-5"><div class="small opacity-75">Upcoming event</div><div class="brand fs-4 mb-3">Tech Innovation Day</div>
+        <div class="d-flex justify-content-between small mb-2"><span>Seats filled</span><strong>128 of 150</strong></div><div class="mprog"><span style="--w:85%"></span></div></div>
+      <h1 class="display-6 mb-2">Run every event from one screen.</h1>
+      <p class="mb-0 opacity-75" style="max-width:40ch">Track registrations, participants and venues without switching between spreadsheets.</p>
+    </div>
+    <div class="small opacity-50">IMS566 individual project</div>
+  </div>
+  <!-- Login form: demo account is already filled in, just press Sign in -->
+  <div class="col-md-6 d-flex align-items-center justify-content-center p-4 position-relative">
+    <button class="btn btn-outline-secondary btn-icon position-absolute top-0 end-0 m-3" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Dark / light mode"><i class="bi bi-moon-stars t-light"></i><i class="bi bi-sun t-dark"></i></button>
+    <form id="lf" class="w-100" style="max-width:380px" novalidate>
+      <img class="d-md-none mb-3" src="assets/icons/favicon.svg" width="44" alt="">
+      <h2 class="h3 mb-1">Sign in</h2>
+      <p class="text-body-secondary mb-3">Demo account is filled in. Just press Sign in, or switch account below.</p>
+      <div class="d-flex gap-2 mb-3"><button type="button" class="btn btn-sm btn-outline-secondary flex-fill" onclick="fill('admin', 'admin123')"><i class="bi bi-shield-lock me-1"></i>Admin</button><button type="button" class="btn btn-sm btn-outline-secondary flex-fill" onclick="fill('customer', 'customer123')"><i class="bi bi-person me-1"></i>Customer</button></div>
+      <div class="alert alert-danger d-none" id="err" role="alert">Wrong username or password. Try again, or <a href="register.html" class="alert-link">create a customer account</a>.</div>
+      <div class="mb-3"><label class="form-label fw-bold small" for="user">Username</label><input id="user" class="form-control" autocomplete="username" value="admin" required></div>
+      <div class="mb-4"><label class="form-label fw-bold small" for="pass">Password</label><input id="pass" type="password" class="form-control" autocomplete="current-password" value="admin123" required></div>
+      <button class="btn btn-primary w-100 py-2">Sign in</button>
+      <p class="text-center small mt-3 mb-0">New here? <a href="register.html">Register as a customer</a></p>
+    </form>
+  </div>
+</div>
+<script src="js/data.js"></script><script src="js/login.js"></script>
+</body>
+</html>
